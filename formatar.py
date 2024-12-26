@@ -1,6 +1,9 @@
 def formatar_cpf(cpf):
-    Fcpf = f"{cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:]}"
-    return Fcpf
+    if len(cpf) == 11:
+        Fcpf = f"{cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:]}"
+        return Fcpf
+    else:
+        return cpf
     
 def formatar_clientes(clientes):
     return "\n".join([

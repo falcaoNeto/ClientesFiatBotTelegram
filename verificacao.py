@@ -57,10 +57,10 @@ def verificar_cpf_usuario(cpf):
     try:
         connect = bd_pool.getconn()
         cursor = connect.cursor()
-        query = "SELECT * FROM funcionario WHERE cpf = %s"
+        query = "SELECT nome FROM funcionario WHERE cpf = %s"
         cursor.execute(query, (cpf,))
-        cpfF = cursor.fetchone()
-        return bool(cpfF)
+        nome = cursor.fetchone()
+        return nome
     except Exception as e:
         print(f"Erro ao acessar o banco de dados: {str(e)}")
         return False
@@ -175,12 +175,5 @@ def verificar_ani_casamento(cpf):
     
     
 if __name__ == "__main__":
-    
-    n1 = verificar_aniversario_cliente('714.134.802-68')
-    n2 = verificar_aniversario_conjuge('714.134.802-68')
-    n3 = verificar_ani_casamento('714.134.802-68')
-    n4 = verificar_ani_compra('714.134.802-68')
-    print(n1)
-    print(n2)
-    print(n3)
-    print(n4)
+    result = verificar_cpf_usuario("714.134.802-68")
+    print(result)
