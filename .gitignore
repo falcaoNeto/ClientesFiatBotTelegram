@@ -1,3 +1,39 @@
-.env
+# Ambientes virtuais
 venv/
 .venv/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários de IDEs/editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Dependências geradas automaticamente
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Arquivos de testes/coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Banco de dados local ou configs sensíveis
+*.sqlite3
+*.db
+.env
